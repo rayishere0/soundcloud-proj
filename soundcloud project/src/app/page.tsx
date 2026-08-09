@@ -58,11 +58,10 @@ function AppShell() {
 
       {/* Player — different rendering for mobile vs desktop */}
       {isMobile ? (
-        // Mobile: use the dedicated mobile player (thumbnail-only collapsed,
-        // expands to full controls on tap). Mini player is a desktop-only
-        // concept on mobile.
-        <MobilePlayer className="shrink-0" />
-      ) : isMiniPlayer ? (
+  <div className="shrink-0">
+    <MobilePlayer />
+  </div>
+) : isMiniPlayer ? (
         // Desktop mini player mode: tiny bar + floating window
         <>
           <div className="h-14 border-t border-[#1f1f1f] bg-[#0a0a0a] px-4 flex items-center justify-between text-xs text-muted-foreground shrink-0">
